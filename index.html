@@ -2,37 +2,61 @@
 <head>
 <meta charset="UTF-8">
 <title>ZoomRemote</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { padding: 1rem; }
+
+.button {
+  background-color: dodgerblue;
+  color: white;
+  padding: 1rem;
+  height: 10rem;
+  font-size:2.5rem;
+  white-space:normal;
+  border-radius:1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+</style>
 </head>
 <body>
+<div class="container">
 <form action="/index.html" method="post">
 <input type="hidden" id="toggle_hand_key_1" name="toggle_hand_key_1" value="alt">
 <input type="hidden" id="toggle_hand_key_2" name="toggle_hand_key_2" value="y">
-<input type="submit" value="&#x270B TOGGLE HAND" style="width:100%;height:20%;font-size:11vw;white-space:normal;">
+<input type="submit" value="&#x270B TOGGLE HAND" class="button">
 </form>
 <form action="/index.html" method="post">
 <input type="hidden" id="toggle_video_key_1" name="toggle_video_key_1" value="alt">
 <input type="hidden" id="toggle_video_key_2" name="toggle_video_key_2" value="v">
-<input type="submit" value="&#x1F3A5 TOGGLE VIDEO" style="width:100%;height:20%;font-size:11vw;white-space:normal;">
+<input type="submit" value="&#x1F3A5 TOGGLE VIDEO" class="button">
 </form>
 <form action="/index.html" method="post">
 <input type="hidden" id="toggle_mute_key_1" name="toggle_mute_key_1" value="alt">
 <input type="hidden" id="toggle_mute_key_2" name="toggle_mute_key_2" value="a">
-<input type="submit" value="&#x1F399 TOGGLE MUTE" style="width:100%;height:20%;font-size:11vw;white-space:normal;">
+<input type="submit" value="&#x1F3A4 TOGGLE MUTE" class="button">
 </form>
 <form action="/index.html" method="post">
 <input type="hidden" id="toggle_mute_all_key_1" name="toggle_mute_all_key_1" value="alt">
 <input type="hidden" id="toggle_mute_all_key_2" name="toggle_mute_all_key_2" value="m">
-<input type="submit" value="&#x1F92B MUTE ALL" style="width:100%;height:20%;font-size:11vw;white-space:normal;">
+<input type="submit" value="&#x1F92B MUTE ALL" class="button">
 </form>
 <form action="/index.html" method="post">
 <input type="hidden" id="toggle_screen_share_key_1" name="toggle_screen_share_key_1" value="alt">
 <input type="hidden" id="toggle_screen_share_key_2" name="toggle_screen_share_key_2" value="s">
-<input type="submit" value="&#x1F4BB TOGGLE SCREEN SHARE" style="width:100%;height:20%;font-size:11vw;white-space:normal;">
+<input type="submit" value="&#x1F4BB TOGGLE SCREEN SHARE" class="button">
 </form>
 <form action="/index.html" method="post">
 <input type="hidden" id="exit_meeting_key_1" name="exit_meeting_key_1" value="alt">
 <input type="hidden" id="exit_meeting_key_2" name="exit_meeting_key_2" value="q">
-<input type="submit" value="&#x1F6D1 EXIT MEETING" style="width:100%;height:20%;font-size:11vw;white-space:normal;">
+<input type="submit" value="&#x1F6D1 EXIT MEETING" class="button">
 </form>
+</div>
 </body>
 </html>
