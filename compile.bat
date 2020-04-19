@@ -1,2 +1,2 @@
-pyinstaller -F webserver.py --name=ZoomRemote --icon=res\icon.ico
+pyinstaller -Fw webserver.py --name=ZoomRemote --icon=res\icon.ico
 pause
