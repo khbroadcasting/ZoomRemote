@@ -7,9 +7,13 @@ PORT = 80
 class MyRequestHandler(SimpleHTTPRequestHandler):
 
     def do_POST(self):
-        if "toggle_hand.html" in self.headers.get('Referer'):
-            print("Toggling Hand...", end=' ')
-            hotkey('alt', 'y')
+        content_length = int(self.headers['Content-Length'])
+        post_data = self.rfile.read(content_length).decode('utf-8')
+
+        keys = [key.split('=')[1] for key in post_data.split('&')]
+        if "index.html" in self.headers.get('Referer'):
+            print(f"Sending keys: {'+'.join(str(k) for k in keys)}...", end=' ')
+            hotkey(*keys)
             print("Done!")
         self.do_GET()
 
