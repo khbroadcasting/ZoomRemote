@@ -31,7 +31,7 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
         self.do_GET()
 
     def do_GET(self):
-        for local_path in ['/', '/index.html', '/favicon.ico']:
+        for local_path in ['/', '/index.html', '/favicon.ico', '/ZoomRemoteDir']:
             if self.path == local_path:
                 self.send_local(self.path)
                 return
@@ -40,14 +40,22 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
 
     def send_local(self, path):
         if path == '/favicon.ico':
-            if os.path.exists(path):
+            if os.path.exists('favicon.ico'):
                 super().do_GET()
             else:
                 self.decoded_icon = b64decode(favicon)
                 self.send_simple_response(self.decoded_icon, 'image/x-icon')
 
+        elif path == '/ZoomRemoteDir':
+            f = self.list_directory(os.path.dirname(os.path.realpath(__file__)))
+            if f:
+                try:
+                    self.copyfile(f, self.wfile)
+                finally:
+                    f.close()
+
         else:
-            if os.path.exists('/index.html'):
+            if os.path.exists('index.html'):
                 super().do_GET()
             else:
                 self.encoded_html = index_html.encode('utf-8')
@@ -130,7 +138,7 @@ body { padding: 1rem; }
 <form action="/index.html" method="post">
 <input type="hidden" id="toggle_hand_key_1" name="toggle_hand_key_1" value="alt">
 <input type="hidden" id="toggle_hand_key_2" name="toggle_hand_key_2" value="y">
-<input type="submit" value="&#x270B TOGGLE HAND" class="button">
+<input type="submit" value="&#x270B TOGGLE RAISE HAND" class="button">
 </form>
 <form action="/index.html" method="post">
 <input type="hidden" id="toggle_video_key_1" name="toggle_video_key_1" value="alt">
@@ -140,12 +148,12 @@ body { padding: 1rem; }
 <form action="/index.html" method="post">
 <input type="hidden" id="toggle_mute_key_1" name="toggle_mute_key_1" value="alt">
 <input type="hidden" id="toggle_mute_key_2" name="toggle_mute_key_2" value="a">
-<input type="submit" value="&#x1F3A4 TOGGLE MUTE" class="button">
+<input type="submit" value="&#x1F3A4 TOGGLE MICROPHONE" class="button">
 </form>
 <form action="/index.html" method="post">
 <input type="hidden" id="toggle_mute_all_key_1" name="toggle_mute_all_key_1" value="alt">
 <input type="hidden" id="toggle_mute_all_key_2" name="toggle_mute_all_key_2" value="m">
-<input type="submit" value="&#x1F92B MUTE ALL" class="button">
+<input type="submit" value="&#x1F92B TOGGLE MUTE ALL" class="button">
 </form>
 <form action="/index.html" method="post">
 <input type="hidden" id="toggle_screen_share_key_1" name="toggle_screen_share_key_1" value="alt">
@@ -156,6 +164,9 @@ body { padding: 1rem; }
 <input type="hidden" id="exit_meeting_key_1" name="exit_meeting_key_1" value="alt">
 <input type="hidden" id="exit_meeting_key_2" name="exit_meeting_key_2" value="q">
 <input type="submit" value="&#x1F6D1 EXIT MEETING" class="button">
+</form>
+<form action="/ZoomRemoteDir" method="get">
+<input type="submit" value="&#x1F4C2 LIST FILES" class="button">
 </form>
 </div>
 </body>
