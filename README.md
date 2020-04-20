@@ -10,13 +10,14 @@ ZoomRemote
 Screenshots
 -----------
 
-Hover for help.
+Buttons for common Zoom _user_ tasks.
+<img src="https://user-images.githubusercontent.com/63978365/79739248-34f50b80-82fe-11ea-9ce7-3f241b308693.png" width="400">
 
-![Easy to understand help screen for non-technical users](https://user-images.githubusercontent.com/63978365/79739203-24dd2c00-82fe-11ea-8bc6-2633a03b5f19.png)
+Buttons for common Zoom _host_ tasks.
+<img src="https://user-images.githubusercontent.com/63978365/79739226-2eff2a80-82fe-11ea-9721-8969699c3885.png" width="800">
 
-![Buttons for common Zoom user tasks](https://user-images.githubusercontent.com/63978365/79739248-34f50b80-82fe-11ea-9ce7-3f241b308693.png)
-
-![Buttons for common Zoom host tasks too](https://user-images.githubusercontent.com/63978365/79739226-2eff2a80-82fe-11ea-9721-8969699c3885.png)
+Easy to understand help screen for non-technical users.
+<img src="https://user-images.githubusercontent.com/63978365/79739203-24dd2c00-82fe-11ea-8bc6-2633a03b5f19.png" width="500">
 
 Instructions
 ------------
