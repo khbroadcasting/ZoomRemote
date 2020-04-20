@@ -29,22 +29,31 @@ You will also likely receive a pop-up from Windows Firewall asking if you want t
 
 These two warnings only appear on the first run - after that it's plain sailing.
 
-### Mac/Linux
-
-**NOT YET TESTED**
+### Linux
 
 #### Dependencies
 
 1. Python 3
-2. pyautogui get it with `pip install pyautogui`
+2. pyautogui - get it with `pip install pyautogui`
+3. pyautogui depends on `python3-tk` and `python3-dev` - install with apt oryum.
 
 #### Installation
 
-Download `webserver.py` from the source above.
+Download `webserver.py` or `webserver-cli.py` from the source above.
 
 #### Usage
 
 `python3 webserver.py`
+
+If you are serving on port 80 - the default - you will need to elevate your privileges with sudo.  If you are running in a venv you might need to specify the python binary directly when using sudo:
+
+`sudo bin/python webserver-cli.py`
+
+If you can't elevate your privs, run on a port higher than 1024 by changing the PORT constant at the top of the source file. (This could be improved see contributing.)
+
+### Mac
+
+**NOT TESTED - FEEDBACK WELCOME**
 
 Advanced
 --------
@@ -76,4 +85,6 @@ Contributions are most welcome!  In particular, pull requests:
 * Improving HTML/CSS Layout for a more intuitive responsive grid would be appreciated.  I would like to be able to have multiple buttons side-by-side on a row on mobile devices, to then add navigation functionality.
 * Refactoring as a module to remove the embedded images and html from the main `webserver.py` to an imported library.
 * Improving the hotkey system to allow multiple hotkeys to be specified to be fired _in sucession_ - for example `<alt>+q` _then_ `ENTER`.
+* That allow the PORT to be specified as a command-line argument.
+* That provide a better command-line interface and module interface.
 * Anything else you can think of.
