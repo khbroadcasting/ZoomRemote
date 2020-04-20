@@ -7,20 +7,24 @@ ZoomRemote
 
 [**Download for Windows**](https://github.com/khbroadcasting/ZoomRemote/raw/master/dist/ZoomRemote.exe)
 
-Screenshots
------------
+Features
+--------
 
-Buttons for common Zoom _user_ tasks.
+* One-click, portable, standalone executable.
 
-<img src="https://user-images.githubusercontent.com/63978365/79739248-34f50b80-82fe-11ea-9ce7-3f241b308693.png" width="400">
+* Buttons for common Zoom _user_ tasks.
 
-Buttons for common Zoom _host_ tasks.
+* Buttons for common Zoom _host_ tasks.
 
-<img src="https://user-images.githubusercontent.com/63978365/79739226-2eff2a80-82fe-11ea-9721-8969699c3885.png" width="800">
+* Easy to understand help screen for non-technical users.
 
-Easy to understand help screen for non-technical users.
+* Completely customizable.
 
-<img src="https://user-images.githubusercontent.com/63978365/79739203-24dd2c00-82fe-11ea-8bc6-2633a03b5f19.png" width="400">
+### Screenshots
+
+<img src="https://user-images.githubusercontent.com/63978365/79739248-34f50b80-82fe-11ea-9ce7-3f241b308693.png" height="100">
+<img src="https://user-images.githubusercontent.com/63978365/79739226-2eff2a80-82fe-11ea-9721-8969699c3885.png" height="100">
+<img src="https://user-images.githubusercontent.com/63978365/79739203-24dd2c00-82fe-11ea-8bc6-2633a03b5f19.png" height="100">
 
 Instructions
 ------------
