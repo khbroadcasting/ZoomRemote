@@ -13,7 +13,7 @@ Instructions
 
 #### Installation
 
-Download the portable, standalone executable [here.]()
+Download the portable, standalone executable [here.](https://github.com/khbroadcasting/ZoomRemote/raw/master/dist/ZoomRemote.exe)
 
 #### Usage
 
