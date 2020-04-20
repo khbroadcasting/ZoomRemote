@@ -1,10 +1,22 @@
 ZoomRemote
 ==========
 
-Python HTTP Server to Remote Control Zoom Videoconferencing
------------------------------------------------------------
+**Python HTTP Server to Remote Control Zoom Videoconferencing**
 
 **Unofficial and unaffiliated with Zoom**
+
+[**Download for Windows**](https://github.com/khbroadcasting/ZoomRemote/raw/master/dist/ZoomRemote.exe)
+
+Screenshots
+-----------
+
+Hover for help.
+
+![Easy to understand help screen for non-technical users](https://user-images.githubusercontent.com/63978365/79739203-24dd2c00-82fe-11ea-8bc6-2633a03b5f19.png)
+
+![Buttons for common Zoom user tasks](https://user-images.githubusercontent.com/63978365/79739248-34f50b80-82fe-11ea-9ce7-3f241b308693.png)
+
+![Buttons for common Zoom host tasks too](https://user-images.githubusercontent.com/63978365/79739226-2eff2a80-82fe-11ea-9721-8969699c3885.png)
 
 Instructions
 ------------
